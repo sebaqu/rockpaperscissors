@@ -48,21 +48,17 @@ function playRound(playerSelection, computerSelection) {
 
 function game() {
     const playerSelection = "roCK";
-    console.log("playing 5 rounds of rock paper scissors...");
-
-    for (let i = 0; i < 5; i++) {
-        const computerSelection = getComputerChoice();
-        if (playRound(playerSelection, computerSelection) == 0) {
-            console.log("You lose!");
-        }
-        else if (playRound(playerSelection, computerSelection) == 1) {
-            console.log("You win!");
-        }
-        else if (playRound(playerSelection, computerSelection) == 2)
-            console.log("It's a tie!");
-        else
-            console.log("Computer wins by default...");
+    const computerSelection = getComputerChoice();
+    if (playRound(playerSelection, computerSelection) == 0) {
+        console.log("You lose!");
     }
+    else if (playRound(playerSelection, computerSelection) == 1) {
+        console.log("You win!");
+    }
+    else if (playRound(playerSelection, computerSelection) == 2)
+        console.log("It's a tie!");
+    else
+        console.log("Computer wins by default...");
 }
 
 game();
